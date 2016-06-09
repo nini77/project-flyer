@@ -28,7 +28,9 @@ class FlyersController extends Controller
      */
     public function create()
     {
-        flash('Hello world');
+        // flash('Hello world','message');
+        flash()->success('Success!','Your Flyer has been created!');
+
         return view('flyers.create');
     }
 
@@ -38,11 +40,13 @@ class FlyersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(FlyerRequest $request,Flash $flash)
+    public function store(FlyerRequest $request)
     {
         Flyer::create($request->all());
 
-        flash('Flyer successfully created!');
+        flash('Success!','Your Flyer has been created!');
+        flash()->success('Success!','Your Flyer has been created!');
+
 
         return redirect()->back();
     }
