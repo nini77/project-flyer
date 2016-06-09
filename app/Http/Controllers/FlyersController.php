@@ -65,6 +65,19 @@ class FlyersController extends Controller
         // return Flyer::where(compact('zip','street'))->first();
     }
 
+
+    public function addphoto($zip,$street,Request $request)
+    {
+        $file = $request->file('file');
+        $name = time() . $file->getClientOriginalName();
+
+        $file->move('Flyers/photos',$name);
+
+        $flyer =Flyer::locatedAt($zip,$street)->first();
+        $flyer->photos()->create(['path' =>"/flyers/photos/{$name}"]);
+
+        return 'working on it';
+    }
     /**
      * Show the form for editing the specified resource.
      *
