@@ -29,7 +29,7 @@ class FlyersController extends Controller
     public function create()
     {
         // flash('Hello world','message');
-        flash()->overlay('Success!','Your Flyer has been created!');
+        flash()->info('Success!','Your Flyer has been created!');
 
         return view('flyers.create');
     }
@@ -57,9 +57,11 @@ class FlyersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($zip,$street)
     {
-        //
+
+        return Flyer::locatedAt($zip,$street)->first();
+        // return Flyer::where(compact('zip','street'))->first();
     }
 
     /**

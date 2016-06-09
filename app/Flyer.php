@@ -22,4 +22,10 @@ class Flyer extends Model
     {
     	return $this->hasMany('App\Photo');
     }
+
+    public function scopeLocatedAt($query,$zip,$street)
+    {
+        $street = str_replace('_', ' ', $street);
+        return $query->where(compact('zip','street'));
+    }
 }
