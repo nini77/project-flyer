@@ -32,6 +32,6 @@ class CreateFlyersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('flryers');
+        Schema::drop('flyers');
     }
 }

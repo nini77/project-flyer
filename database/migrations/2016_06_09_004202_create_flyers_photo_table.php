@@ -16,7 +16,7 @@ class CreateFlyersPhotoTable extends Migration
             $table->increments('id');
             $table->integer('flyer_id')->unsigned();
             $table->foreign('flyer_id')->references('id')->on('flyers')->onDelete('cascade');
-            $table->string('photo');
+            $table->string('path');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateFlyersPhotoTable extends Migration
      */
     public function down()
     {
-        Schema::drop('flryer_photos');
+        Schema::drop('flyer_photos');
     }
 }
