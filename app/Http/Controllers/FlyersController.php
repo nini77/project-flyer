@@ -29,7 +29,7 @@ class FlyersController extends Controller
     public function create()
     {
         // flash('Hello world','message');
-        flash()->error('Success!','Your Flyer has been created!');
+        flash()->overlay('Success!','Your Flyer has been created!');
 
         return view('flyers.create');
     }
