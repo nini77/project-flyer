@@ -68,7 +68,7 @@ class FlyersController extends Controller
 
     public function addphoto($zip,$street,Request $request)
     {
-        $file = $request->file('file');
+        $file = $request->file('photo');
         $name = time() . $file->getClientOriginalName();
 
         $file->move('Flyers/photos',$name);
