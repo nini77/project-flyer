@@ -16,5 +16,21 @@ Route::get('/', function () {
 });
 
 Route::resource('flyers','FlyersController');
+
+Route::get('flyersIndex','FlyersController@index');
 Route::get('{zip}/{street}','FlyersController@show');
 Route::post('/{zip}/{street}/photos','FlyersController@addphoto');
+
+Route::post('flyers2','FlyersController@store');
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

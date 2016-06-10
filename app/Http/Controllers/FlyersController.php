@@ -11,6 +11,14 @@ use App\Flyer;
 
 class FlyersController extends Controller
 {
+
+    public function __construct()
+    {
+
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +26,9 @@ class FlyersController extends Controller
      */
     public function index()
     {
-        //
+        $flyers =Flyer::orderBy('id')->paginate(10);;
+
+        return view('flyers.index',compact('flyers'));
     }
 
     /**
@@ -29,7 +39,7 @@ class FlyersController extends Controller
     public function create()
     {
         // flash('Hello world','message');
-        flash()->info('Success!','Your Flyer has been created!');
+        // flash()->info('Success!','Your Flyer has been created!');
 
         return view('flyers.create');
     }

@@ -24,9 +24,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/flyersIndex">street</a></li>
+            <li><a href="/06214/4900 Tyler Tunnel Suite 733">sampleHouse1</a></li>
+            <li><a href="/22981/1406 Kohler Neck">sampleHouse2</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

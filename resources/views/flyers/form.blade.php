@@ -1,4 +1,7 @@
 @inject('countries','App\Http\Utilities\Country')
+  
+<div class="row">
+<div class="col-md-6">
       {{csrf_field()}}
       
    	<div class="form-group">
@@ -33,7 +36,8 @@
    		<label for="price">price:</label>
    		<input type="text" name="price" id ="price" class="form-control" value="{{old('price')}}" required>
    	</div>
-
+</div>
+<div class="col-md-6">
 	<div class="form-group">
    		<label for="description">description:</label>
    		<textarea type="text" name="description" id ="description" class="form-control" rows=10 required>
@@ -41,12 +45,15 @@
    		</textarea> 
    	</div>
 	
-	<div class="form-group">
+<!-- 	<div class="form-group">
    		<label for="photos">Photos:</label>
    		<input type="file" name="photos" id ="photos" class="form-control" value="{{old('photos')}}" required>
-   	</div>
-
-
+   </div> -->
+</div>
+</div>
+<div class="col-md-12">
+      <hr>
    	<div class="form-group">
    		<button type="submit" class="btn btn-primary">Create Flyer</button>
    	</div>
+</div>      
