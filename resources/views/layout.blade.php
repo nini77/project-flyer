@@ -26,8 +26,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
             <li><a href="/flyersIndex">street</a></li>
-            <li><a href="/06214/4900 Tyler Tunnel Suite 733">sampleHouse1</a></li>
-            <li><a href="/22981/1406 Kohler Neck">sampleHouse2</a></li>
+            <li><a href="/3310811/Mineki Sekiuchi">Mineki Sekiguchi</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
