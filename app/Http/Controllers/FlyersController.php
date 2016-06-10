@@ -55,7 +55,7 @@ class FlyersController extends Controller
         Flyer::create($request->all());
 
         // flash('Success!','Your Flyer has been created!');
-        flash()->success('Success!','Your Flyer has been created!');
+        // flash()->success('Success!','Your Flyer has been created!');
 
 
         return redirect()->back();
