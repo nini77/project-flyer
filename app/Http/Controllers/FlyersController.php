@@ -84,7 +84,7 @@ class FlyersController extends Controller
         $file->move('Flyers/photos',$name);
 
         $flyer =Flyer::locatedAt($zip,$street)->first();
-        $flyer->photos()->create(['path' =>"/flyers/photos/{$name}"]);
+        $flyer->photos()->create(['path' =>"/Flyers/photos/{$name}"]);
 
         return 'working on it';
     }
